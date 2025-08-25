@@ -7,46 +7,244 @@
 </head>
 <body>
   <header>
-    <div class="nav-container">
-      <h1>Özbek Avukatlık</h1>
-      <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="hakkimizda.html">Biz Kimiz?</a>
-        <a href="faaliyetler.html">Faaliyet Alanları</a>
-        <a href="iletisim.html">İletişim</a>
-      </nav>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images\logo1.jpg" alt="Özbek Avukatlık Bürosu Logosu">
+      <span>Özbek Avukatlık Bürosu</span>
     </div>
-  </header>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimizda.html">Biz Kimiz?</a>
+      <a href="faaliyetler.html">Faaliyet Alanları</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+  </div>
+</header>
 
+  <section class="faaliyetler-container">
+    <h2>Faaliyet Alanlarımız</h2>
+    <div class="faaliyetler-grid">
 
+      <!-- 1. Ceza Hukuku -->
+      <div class="faaliyet-kutu" onclick="openModal('ceza')">
+        <img src="images/cezahukuku.jpeg" alt="Ceza Hukuku">
+        <h3>Ceza Hukuku</h3>
+        <p>Kısa açıklama: Ceza davalarında uzman temsil.</p>
+      </div>
 
-<section class="faaliyetler-container">
-  <h2>Faaliyet Alanlarımız</h2>
-  <div class="faaliyetler-grid">
-    <div class="faaliyet-kutu">
-      <img src="images/cezahukuku.jpeg" alt="Ceza Hukuku">
-      <h3>Ceza Hukuku</h3>
-      <p>Ceza davalarında uzman temsil.</p>
+      <!-- 2. Boşanma Davaları -->
+      <div class="faaliyet-kutu" onclick="openModal('bosanma')">
+        <img src="images/bosanmadava1.jpeg" alt="Boşanma Davaları">
+        <h3>Boşanma Davaları</h3>
+        <p>Kısa açıklama: Aile içi anlaşmazlıklarda profesyonel destek.</p>
+      </div>
+
+      <!-- 3. İcra ve İflas Hukuku -->
+      <div class="faaliyet-kutu" onclick="openModal('icra')">
+        <img src="images/icraveiflas.jpeg" alt="İcra ve İflas Hukuku">
+        <h3>İcra ve İflas Hukuku</h3>
+        <p>Kısa açıklama: Alacak takibi ve haciz işlemleri konusunda etkin çözümler.</p>
+      </div>
+
+      <!-- 4. Ticaret Hukuku -->
+      <div class="faaliyet-kutu" onclick="openModal('ticaret')">
+        <img src="images/ticarethukuk.jpg" alt="Ticaret Hukuku">
+        <h3>Ticaret Hukuku</h3>
+        <p>Kısa açıklama: Ticari uyuşmazlıklarda profesyonel destek.</p>
+      </div>
+
+      <!-- 5. Gayrimenkul Hukuku -->
+      <div class="faaliyet-kutu" onclick="openModal('gayrimenkul')">
+        <img src="images/GayrimenkulHukuku.jpg" alt="Gayrimenkul Hukuku">
+        <h3>Gayrimenkul Hukuku</h3>
+        <p>Kısa açıklama: Tapu ve mülkiyet davalarında uzmanlık.</p>
+      </div>
+
+      <!-- 6. İnşaat Hukuku -->
+      <div class="faaliyet-kutu" onclick="openModal('insaat')">
+        <img src="images/İnşaatHukuku.jpg" alt="İnşaat Hukuku">
+        <h3>İnşaat Hukuku</h3>
+        <p>Kısa açıklama: İnşaat sözleşmeleri ve anlaşmazlıklarda destek.</p>
+      </div>
+
+      <!-- 7. Sağlık ve İlaç Hukuku -->
+      <div class="faaliyet-kutu" onclick="openModal('saglik')">
+        <img src="images/SağlıkveİlaçHukuku.jpg" alt="Sağlık ve İlaç Hukuku">
+        <h3>Sağlık ve İlaç Hukuku</h3>
+        <p>Kısa açıklama: Sağlık sektöründe hukuki çözümler.</p>
+      </div>
+
+      <!-- 8. Fikri ve Sınai Haklar -->
+      <div class="faaliyet-kutu" onclick="openModal('fikri')">
+        <img src="images/FikriveSınaiHaklarHukuku.jpg" alt="Fikri ve Sınai Haklar">
+        <h3>Fikri ve Sınai Haklar Hukuku</h3>
+        <p>Kısa açıklama: Marka, patent ve telif hakları uyuşmazlıkları.</p>
+      </div>
+
+      <!-- 9. Vergi Hukuku -->
+      <div class="faaliyet-kutu" onclick="openModal('vergi')">
+        <img src="images/VergiHukuku.jpg" alt="Vergi Hukuku">
+        <h3>Vergi Hukuku</h3>
+        <p>Kısa açıklama: Vergi davaları ve uzlaşma süreçlerinde temsil.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="faaliyet-kutu">
-      <img src="images/bosanmadava1.jpeg" alt="Boşanma Davaları">
-      <h3>Boşanma Davaları</h3>
-      <p>Aile içi anlaşmazlıklarda profesyonel destek.</p>
-    </div>
-
-    <div class="faaliyet-kutu">
-      <img src="images/icraveiflas.jpeg" alt="İcra ve İflas Hukuku">
-      <h3>İcra ve İflas Hukuku</h3>
-      <p>Alacak takibi ve haciz işlemleri konusunda etkin çözümler.</p>
+  <!-- MODAL LER BODY SONUNDA -->
+  <div id="ceza" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('ceza')">&times;</span>
+      <h2>Ceza Hukuku</h2>
+      <p>Suç olarak tanımlanan davranışlar gerçekleştirildiklerinde toplumsal barışı tehdit ederler. Ceza hukuku, suçları tanımlayan, suçlar için öngörülen yaptırımları ve bu yaptırımların nasıl uygulanacağını gösteren hukuk alanıdır. Ceza hukukunun cezalandırıcı bir işlevi vardır. Ayrıca ceza hukuku, koruyucu işlevi gereği, suçluların cezalandırılmasını sağladığı için başka kişilerin suç işlemesini de engeller. Ceza hukuku, suçları ve yaptırımları gösteren “maddi” ceza hukukunu ve suçların ortaya çıkarılıp faillerinin yargılanması (ceza muhakemesi hukuku) ve yaptırımların uygulanması (infaz hukuku) ile ilgili konuları içeren “şekli” ceza hukukunu içerir. Ceza davalarında hukuk bürosu olarak, müvekkillerimizin ceza soruşturma ve kovuşturma aşamalarında maddi gerçeğin ortaya çıkarılması konusunda hukuki destek vermekteyiz. Müvekkillerimize, soruşturma aşamasının başından kovuşturma aşamasının sonuna kadar her evrede hukuki destek ve en iyi şekilde temsilini sağlamaktayız. Ceza davasının açılması durumunda (kovuşturma aşaması) mahkemede savunmanın gerçekleştirilmesi, delillerin toplanması ve sunulması, yazılı savunma süreci, istinaf ve temyiz başvuru aşamaları ve diğer tüm işlemlerde Özbek Avukatlık Bürosu olarak müvekkillerimize etkin bir şekilde hukuk hizmeti sunmaktayız.</p>
     </div>
   </div>
-</section>
 
+  <div id="bosanma" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('bosanma')">&times;</span>
+      <h2>Boşanma Davaları</h2>
+      <p>Anlaşmalı ve çekişmeli boşanma, nafaka, velayet, mal paylaşımı gibi aile hukuku konularında müvekkillerimize hukuki destek sunuyoruz.</p>
+    </div>
+  </div>
 
+  <div id="icra" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('icra')">&times;</span>
+      <h2>İcra ve İflas Hukuku</h2>
+      <p>Alacağı borçlu tarafından zamanında ödenmeyen alacaklı, bu alacağını bizzat zor kullanarak elde edemez. Borcunu zamanında ve gereği gibi yerine getirmeyen borçluya karşı zorlama yani cebri icra, sadece yasalar çerçevesinde, kamu otoritesi tarafından yapılabilir.
+
+İcra ve İflas Hukuku konusunu; özel hukuk ilişkilerinden doğan para ve teminat alacaklarının, borçlu tarafından ödenmemesi durumunda, alacaklının talebi üzerine, kanunda belirlenmiş sınırlar çerçevesinde, kamu otoritesi ve kuvveti yardımı ile nasıl karşılanacağından almaktadır. Borcun karşılanması ancak, borçlunun taşınır ve taşınmaz mallar ile 3. Şahıslardaki hak ve alacakları üzerinden yapılabilmektedir.
+
+Ülkemizde, borcun tahsili ve ödenmesine ilişkin tüm usul ve esaslar, icra ve iflas kanunu ile düzenlenmiş olup; kanun gereğince alacağın tahsili için, icra ve iflas daireleri ile birlikte, İcra Mahkemeleri görevlendirilmiştir. İhtiyaç duyulması halinde başta polis olmak üzere, tüm kolluk kuvvetleri de İcra Müdürü’nün talebi üzerine cebri icrada görevlendirilebilirler.
+
+Özbek Avukatlık Bürosu olarak, müvekkillerimize bu kapsamda verdiğimiz başlıca hizmetlerimiz;
+
+Çek ve senede dayalı alacakların tahsili için, icra takibi yapılması,
+Cari hesap ve faturaya dayalı alacakların tahsili için icra takibi yapılması,
+Finans, kredi ve leasing sözleşmelerinden doğan alacakların tahsili için, icra takibi başlatma,
+Alacaklı gerçek ve tüzel kişilerin alacağını elde edebilmesi için borçlu aleyhine yapılacak iflas takibi ve buna bağlı olarak iflas davasının açılması ve takibi,
+Borçlu tarafından yapılan haksız itirazların iptali için, itirazın iptali davası açılması ve dava sürecinin takibi,
+Haksız ve mesnetsiz alacak iddiaları nedeniyle borçlu olunmadığının tespiti için menfi tespit davası açılması ve dava sürecinin takibi,
+Alacaklı gerçek ve tüzel kişiler adına alacaklarının yasal takibi, borçlu gerçek ve tüzel kişiler aleyhinde yapılmış yasal takip işlemlerinde ise hukuksal alanların korunması, gerçek borcun belirlenmesinin sağlanması,
+Alacaklı ve borçlu için anlaşma zemini yaratılmasında hukuki destek verilmesi,
+İflasın kapanmasına kadar geçen sürede tüm işlemlerin yasal takibi, gerçek ve tüzel kişilerin iflaslarına ilişkin tüm yasal işlemlerin takibinin yapılması,
+İflas davası süreci ve iflasın kapanmasına kadar geçen süre içinde tüm hukuksal alanlarının korunması,
+En az hasarla iflas ettirilmesi hususunda gerekli analiz çalışmalarının yapılması, iflasın ertelenmesi için gerekli hukuki prosedürlerin yerine getirilmesi.
+Ekonomik durumu bozulan gerçek ve tüzel kişilerin mali durumlarının eski haline getirilmesi için konkordato ilan edilmesi,
+Gerçek ve tüzel kişilerin icra ve iflas hukukundan kaynaklı bağımsız davalarının takip edilmesi ve sonuçlandırılması.</p>
+    </div>
+  </div>
+
+  <div id="ticaret" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('ticaret')">&times;</span>
+      <h2>Ticaret Hukuku</h2>
+      <p>Ticaret Hukuku, gerçek ve tüzel kişiler arasında ticari ilişkileri düzenleyen hukuk dallarından biridir. Ticaretle uğraşan gerçek ve tüzel kişi niteliğindeki tacirler arasında oluşan nitelikli iş, işlem, ticaret hukuku çek konusu gibi ticari borçlanma ilişkilerini düzenlemektedir. Ticari işletmeyi ilgilendiren, kuruluş, yapılanma, çalışma şekilleri, sona erme ile ticari iş ve işlemlerde kullanılan kıymetli evraklara ilişkin kuralları ayrıntılı olarak sıralamaktadır.
+
+Özbek Avukatlık Bürosu, Ticaret Hukukunun genel kavramları arasında yer alan tacir, ticari işletme, ticaret sicili, ticaret unvanı, haksız rekabet, ticari defterler, cari hesap, ticari işler tellallığı, acentelik, ticaret ortaklıkları alanlarında danışmanlık ve dava takip hizmeti vermektedir. Kıymetli evrak, poliçe, bono, çek ve emtia senetleri, taşıma senetleri ile ilgili dava takibi ile icra takibi süreçleri başlıca uzmanlık alanlarımızdandır.
+
+Özbek Avukatlık Bürosu olarak, müvekkillerimize bu kapsamda verdiğimiz başlıca hizmetlerimiz;
+
+Şirketlerin ve ortak girişimlerin hızlı ve kolayca kurulması,
+Günlük ticari işlem konularında danışmanlık hizmeti verilmesi,
+Kurumsal yönetim danışmanlığı,
+Proje finansmanı için teminatlar oluşturulması, kredi sözleşmelerinin hazırlanması,
+Distribütörlük, franchise, bayilik, yönetim ve üst düzey yönetici sözleşmeleri şeklinde her türlü ticari sözleşmelerin müzakere edilmesi ve hazırlanması,
+Özelleştirme, halka açılma, birleşme ve devralma sözleşmelerinin hazırlanması,
+Mal varlığı ve hisse satış sözleşmelerinin müzakeresi ve mutabakatının sağlanması,
+Şirketlerin en az hasarla iflası ve tasfiyesi,
+Azınlık haklarının korunması ve bu işlemlere ilişkin ön araştırmaların yapılması,
+Rekabet hukuku kurallarına uyum konusunda danışmanlık verilmesi, konuyla ilgili bildirimlerin hazırlanması ve Rekabet Kurumu’na sunulması,
+Sözleşmelerin rekabet hukuku kuralları yönünden değerlendirilmesi,
+Şirketler Hukuku’ndan doğan dava ve ihtilaflarda ve bu alana ilişkin ceza ve idari davalarda müvekkillerin temsil edilmesi,
+Şirketlerin genel kurul toplantıları ile yönetim ve yönetici sorumluluğunun denetlenmesi, özel denetçi, geçici yönetim ve kayyum atanmasının sağlanması, azınlık ve imtiyazlı hakların korunması,
+Sermaye piyasası ile uyum çalışmaları ve banka hukukundan kaynaklanan ihtilafların yönetilmesi,
+Ticaret ve şirket davalarında; yetkili satıcı ilişkileri, distribütörlük, haksız rekabet, alış ve satış sözleşmeleri, büyük miktarlı alacakların tespiti, tahsili, icraya konulması, şirketlerin iflas ve tasfiyesi, ürün sorumluluğu, tüketicinin korunması, sigorta ve reasürans, gümrük, ithalat ve ihracat konuları, taşımacılık, gümrük tarifeleri, ithalat ve ihracatta kıymetlendirme, yabancı mahkeme ve hakem kararlarının tanınması ve tenfiz gibi geniş bir perspektifte hizmet verilmesi,
+İdare ve ceza hukuku alanında kaçakçılık, gümrük, kurumlar vergisi ve vergilendirme, transfer fiyatlandırması, kamu ihaleleri ile sermaye piyasası, rekabet hukuku ve yolsuzlukla mücadele uygulamalarına uyum çalışmaları hakkında danışmanlık hizmeti sunulması.</p>
+    </div>
+  </div>
+
+  <div id="gayrimenkul" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('gayrimenkul')">&times;</span>
+      <h2>Gayrimenkul Hukuku</h2>
+      <p>Kira sözleşmeleri, tapu iptali, mülkiyet uyuşmazlıkları, imar sorunları ve kat mülkiyeti davalarında destek sağlıyoruz.</p>
+    </div>
+  </div>
+
+  <div id="insaat" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('insaat')">&times;</span>
+      <h2>İnşaat Hukuku</h2>
+      <p>Yapım sözleşmeleri, yüklenici – işveren ihtilafları, ayıplı iş ve teslim davalarında profesyonel çözümler sunuyoruz.</p>
+    </div>
+  </div>
+
+  <div id="saglik" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('saglik')">&times;</span>
+      <h2>Sağlık ve İlaç Hukuku</h2>
+      <p>Hastane ve doktor sorumluluğu, tıbbi hata davaları, ilaç şirketleriyle ilgili hukuki süreçlerde hizmet verilmektedir.</p>
+    </div>
+  </div>
+
+  <div id="fikri" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('fikri')">&times;</span>
+      <h2>Fikri ve Sınai Haklar Hukuku</h2>
+      <p>Marka, patent, tasarım ve telif hakkı davalarında müvekkillerimizi temsil ediyoruz.</p>
+    </div>
+  </div>
+
+  <div id="vergi" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('vergi')">&times;</span>
+      <h2>Vergi Hukuku</h2>
+      <p>Vatandaşlık görevlerinden biri olan vergi ödeme yükümlülüğünde yaşanan usulsüzlükler, Vergi Usul Kanununda ağırlaştırılmış yaptırımları gerekli kılmaktadır. Vergi hukuku içeriği, hem birey hakları hem de devletin birey üzerindeki haklarını ve yaptırım gücünü ortaya koyar. Vergi borcu, devletin vergi borcu cezası uygulama hakkı ve bireylerin bu süreçte yapması gerekenler vergi hukuku kapsamında ele alınır.
+
+Vergi Hukuku, yasal sınırlar içerisinde, devlet ile gerçek ve tüzel kişiler arasındaki vergi ilişkisinden doğan karşılıklı hak ve ödevleri düzenleyen hukuk dalıdır. Vergi hukuku tanımı gereği, vergilendirme işlemlerindeki tarh, tebliğ, tahakkuk ve tahsil işlemlerinin şekil ve şartlarını belirlemekle birlikte, idarenin bu şekil ve şartların dışına çıkması nedeniyle oluşan vergi uyuşmazlıklarındaki çözüm yollarını da içermektedir. Ayrıca, vergi uygulamaları nedeniyle vergi idaresi ile mükellef veya vergi sorumluları arasında çıkan uyuşmazlıkları da konu edinir. Bu konular, 2577 sayılı İdari Yargılama Usulü Kanununda düzenlenmiştir.
+
+Özbek Avukatlık Bürosu olarak, müvekkillerimize bu kapsamda verdiğimiz başlıca hizmetlerimiz;
+
+Gerçek ve tüzel kişilerin vergiye ilişkin küçük büyük ihtilaflarının çözümü için sonuç alma,
+Gelir idareleri, vergi daireleri ve gümrük idaresi tarafından yapılan resen tahakkuk ve kesilen usulsüzlük cezalarının iptali için dava açılması ve dava sürecinin takibi,
+Vergi Mahkemeleri, Bölge İdare Mahkemeleri ve Danıştay da bulunan davalarda teknik ve hukuki destek sağlanması ve çözüm üretilmesi,
+Tahakkuk ettirilen vergiler, dayanaksız ödeme emirleri, vergi zıyaı ve usulsüzlük cezaları gibi vergi uyuşmazlıklarının giderilmesi için idare nezdinde uzlaşmaya başvurma,
+Vergi Daireleri nezdinde, vergi yapılandırma süreçleri için başvuru yapılması ve takibi,
+Vergi ihtilaflarına ilişkin mukteza sürecinde teknik ve hukuki destek verilmesi,
+Gelir idareleri, vergi daireleri ve gümrük idaresi tarafından yapılan resen tahakkuk ve kesilen usulsüzlük cezalarına ilişkin yol gösterme, temsil etme, ortaya çıkan vergi hukuku cezalarının uzlaşmayla çözülmesinin sağlanması,
+Şirketlerin vergisel yönden yeniden yapılandırılması, uzlaşma konusunda vergi danışmanlığı yapma,
+İdari makamlardan özelge ve görüş alınması,
+Uluslararası ve yurt içi vergi planlaması konularında ve vergi hukuku uygulamalarında danışmanlık verme: İç denetim ve inceleme aşamalarına yönelik destek, mevzuata uyum çalışmaları ve peşin fiyatlandırma anlaşmalarının yapılmasının sağlanması,
+Transfer fiyatlandırması, gümrük uzlaşmaları ve incelemeleri hizmeti verme,
+Vergi incelemesi, transfer fiyatlandırması danışmanlığı,
+Vergi incelemelerinde teknik doküman ve listelerin hazırlanması, vergi inceleme raporlarının değerlendirilmesi,
+Birleşme, devralma ve bölünme işlemleri öncesinde vergisel risk tespiti, ulusal ve uluslararası düzenlemeleri ve vergisel anlaşmaları da dikkate alarak, birleşme- devralma ve bölünme işlemleri sırasında şirketlerin vergisel yönden yeniden yapılandırılması ve vergi planlaması gibi hizmetleri.
+Vergi hukuku bölümleri olan; kurumlar vergisi, gelir vergisi, katma değer vergisi, gelir vergisi stopajı, kaynak kullanım destekleme fonu, emlak vergisi, özel işlem vergisi, damga vergisi, motorlu taşıtlar vergisi ve benzer doğrudan ve dolaylı vergiler kapsamında yanlış veya eksik gelir beyanları; resen, ikmalen ya da idare tarafından yapılan tarh işlemleri, hatalı indirimler, alakalı ya da bağlı şirketler arasında transfer fiyatlandırılması işlemleri, hissedarlara borçlanma ya da dolaylı hissedar yatırımı kaynaklı örtülü sermaye değerlendirmeleri, damping vergileri, dar mükelleflerin gelirlerinin beyanı ve benzer her türlü vergi uyuşmazlığı konusunda yüksek kalitede hizmet verme,</p>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Özbek Avukatlık Bürosu - Tüm hakları saklıdır.</p>
   </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(event) {
+      let modals = document.getElementsByClassName("modal");
+      for (let i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+          modals[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
 </body>
 </html>
