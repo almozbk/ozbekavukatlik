@@ -9,9 +9,11 @@
   <header>
   <div class="nav-container">
     <div class="logo">
-      <img src="images\logo1.jpg" alt="Özbek Avukatlık Bürosu Logosu">
+      <img src="images/logo1.jpg" alt="Özbek Avukatlık Bürosu Logosu">
       <span>Özbek Avukatlık Bürosu</span>
     </div>
+    <!-- Hamburger butonu -->
+    <div class="menu-toggle">☰</div>
     <nav>
       <a href="index.html">Ana Sayfa</a>
       <a href="hakkimizda.html">Biz Kimiz?</a>
@@ -20,6 +22,7 @@
     </nav>
   </div>
 </header>
+
 
   <section class="faaliyetler-container">
     <h2>Faaliyet Alanlarımız</h2>
@@ -245,6 +248,16 @@ Vergi hukuku bölümleri olan; kurumlar vergisi, gelir vergisi, katma değer ver
       }
     }
   </script>
+
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
+
 
 </body>
 </html>

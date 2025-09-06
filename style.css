@@ -398,3 +398,41 @@ footer {
 .faaliyetler-butonu h3 a:hover {
   color: #002b5c;  /* Hoverda koyu mavi */
 }
+
+/* Hamburger Menü (Mobil) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Mobilde aktif hale getir */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* Menü gizli */
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;   /* header yüksekliğinin altına gelsin */
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 10px;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+
+  nav.show {
+    display: flex; /* Toggle ile açılacak */
+  }
+
+  .menu-toggle {
+    display: block; /* Mobilde göster */
+    color: #000;
+  }
+}
+
