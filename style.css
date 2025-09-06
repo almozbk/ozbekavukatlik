@@ -70,7 +70,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #002b5c; /* Koyu mavi hover efekti */
+  color: #000000; /* Koyu mavi hover efekti */
   text-decoration: none;
 }
 
@@ -91,7 +91,7 @@ h1 {
 .faaliyetler-container h2 {
   font-size: 2em;
   margin-bottom: 40px;
-  color: #002b5c;
+  color: #000000;
 }
 
 /* Grid yapısı */
@@ -105,16 +105,18 @@ h1 {
 .faaliyet-kutu {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25); /* daha koyu ve belirgin gölge */
   padding: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   cursor: pointer;
 }
 
 .faaliyet-kutu:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.45); /* hoverda daha derin gölge */
 }
+
 
 .faaliyet-kutu img {
   max-width: 100%;
@@ -125,7 +127,7 @@ h1 {
 }
 
 .faaliyet-kutu h3 {
-  color: #002b5c;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -216,8 +218,13 @@ h1 {
 
 .info-box {
   flex: 1 1 300px;
-  padding: 20px;
+  padding: 25px 25px 25px 35px;
+  background: #fff;
+  border-left: 6px solid #000; /* Siyah şerit */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
+
 
 .info-box img {
   max-width: 100%;
@@ -255,7 +262,7 @@ h1 {
 }
 
 .contact-info h2 {
-  color: #002b5c;
+  color: #000000;
   font-size: 2em;
   margin-bottom: 25px;
   font-weight: 600;
@@ -291,7 +298,7 @@ h1 {
 }
 
 .contact-info a {
-  color: #002b5c;
+  color: #000000;
   text-decoration: none;
   font-weight: 500;
 }
@@ -396,7 +403,7 @@ footer {
 }
 
 .faaliyetler-butonu h3 a:hover {
-  color: #002b5c;  /* Hoverda koyu mavi */
+  color: #000000;  /* Hoverda koyu mavi */
 }
 
 /* Hamburger Menü (Mobil) */
@@ -436,9 +443,16 @@ footer {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: black !important;
+
+
+
+
+.faaliyet-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
+
 
 
 
