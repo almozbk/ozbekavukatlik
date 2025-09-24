@@ -182,7 +182,7 @@ h1 {
 
 /* Banner ve Info */
 .section-banner {
-  margin-top: 20px;
+  margin-top: 0px;
   position: relative;
 }
 
@@ -193,11 +193,11 @@ h1 {
 
 .section-content {
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -40%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+
+  color: #000000;
   padding: 40px;
   max-width: 600px;
   text-align: center;
@@ -309,7 +309,7 @@ h1 {
 
 .contact-map {
   flex: 1 1 500px;
-  min-height: 300px;
+  min-height: 280px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
